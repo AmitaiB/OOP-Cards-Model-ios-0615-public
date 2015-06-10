@@ -10,10 +10,10 @@
 
 @interface Card : NSObject
 
-@property (nonatomic) NSInteger cardNumber;
+@property (nonatomic, strong) NSNumber* cardNumber;
 @property (nonatomic, strong) NSString *brand;
 
 -(instancetype)init;
--(instancetype)initWithCardNumber:(NSInteger)cardNumber brand:(NSString*)brand;
+-(instancetype)initWithCardNumber:(NSNumber*)cardNumber brand:(NSString*)brand;
 
 @end

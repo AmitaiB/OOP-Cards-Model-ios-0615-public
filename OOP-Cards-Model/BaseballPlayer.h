@@ -13,16 +13,16 @@
 @property (nonatomic, strong) NSString *teamName;
 @property (nonatomic, strong) NSString *playerFirstName;
 @property (nonatomic, strong) NSString *playerLastName;
-@property (nonatomic) NSInteger playerNumber;
-@property (nonatomic) NSInteger playerWeight;
-@property (nonatomic) NSInteger playerHeight;
+@property (nonatomic) NSNumber* playerNumber;
+@property (nonatomic) NSNumber* playerWeight;
+@property (nonatomic) NSNumber* playerHeight;
 
 -(instancetype)init;
 -(instancetype)initWithFirstName:(NSString*)firstName
                         PlayerTeam:(NSString*)teamName
                          lastName:(NSString*)lastName
-                           number:(NSInteger)playerNumber
-                           weight:(NSInteger)playerWeight
-                           height:(NSInteger)playerHeight;
+                           number:(NSNumber*)playerNumber
+                           weight:(NSNumber*)playerWeight
+                           height:(NSNumber*)playerHeight;
 
 @end

@@ -10,11 +10,12 @@
 
 @implementation BaseballCard
 
--(instancetype)initWithPlayer:(BaseballPlayer*)player teamName:(NSString*)team brand:(NSString*)brand cardNumber:(NSInteger)cardNum {
+-(instancetype)initWithBaseballPlayer:(BaseballPlayer*)player teamName:(NSString*)team brand:(NSString*)brand cardNumber:(NSNumber*)cardNum {
     self = [super initWithCardNumber:cardNum brand:brand];
     if (self) {
     _player = player;
     player.teamName = team;
+        _teamName = team;
     };
     return self;
 }

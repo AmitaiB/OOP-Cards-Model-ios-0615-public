@@ -12,8 +12,9 @@
 @interface BaseballCard : Card
 
 @property (nonatomic, strong) BaseballPlayer *player;
+@property (nonatomic, strong) NSString *teamName;
 
--(instancetype)initWithBaseballPlayer:(BaseballPlayer*)player teamName:(NSString*)team brand:(NSString*)brand cardNumber:(NSInteger)cardNum;
+-(instancetype)initWithBaseballPlayer:(BaseballPlayer*)player teamName:(NSString*)team brand:(NSString*)brand cardNumber:(NSNumber*)cardNum;
 -(instancetype)init;
 
 -(NSString *)description;

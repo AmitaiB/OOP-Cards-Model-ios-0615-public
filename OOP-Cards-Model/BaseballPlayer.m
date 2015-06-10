@@ -11,18 +11,26 @@
 @implementation BaseballPlayer
 
 
--(instancetype)init {
-    return [self init];
-}
 
 -(instancetype)initWithPlayerTeam:(NSString*)teamName
                         firstName:(NSString*)firstName
                          lastName:(NSString*)lastName
-                           number:(NSInteger)playerNumber
-                           weight:(NSInteger)playerWeight
-                           height:(NSInteger)playerHeight {
-    self = [self init];
-    
+                           number:(NSNumber*)playerNumber
+                           weight:(NSNumber*)playerWeight
+                           height:(NSNumber*)playerHeight {
+    self = [super init];
+    if (self) {
+                    _teamName = teamName;
+            _playerFirstName = firstName;
+            _playerLastName = lastName;
+            _playerNumber = playerNumber;
+            _playerWeight = playerWeight;
+            _playerHeight = playerHeight;
+    }
+    return self;
 }
 
+-(instancetype)init {
+    return [self initWithFirstName:@"" PlayerTeam:@"" lastName:@"" number:@0 weight:@0 height:@0];
+}
 @end
