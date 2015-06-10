@@ -7,10 +7,14 @@
 //
 
 #import "Card.h"
+#import "BaseballPlayer.h"
 
 @interface BaseballCard : Card
 
+@property (nonatomic, strong) BaseballPlayer *player;
 
+-(instancetype)init;
 
+-(NSString *)description;
 
 @end

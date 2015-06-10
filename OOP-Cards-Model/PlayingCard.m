@@ -14,4 +14,8 @@
     return [self init];
 }
 
+-(NSString*)description {
+    return [NSString stringWithFormat:@"%li of %@", (long)self.rank, self.suit];
+}
+
 @end

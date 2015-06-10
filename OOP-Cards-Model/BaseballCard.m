@@ -10,4 +10,12 @@
 
 @implementation BaseballCard
 
+-(instancetype)init {
+    return [self init];
+}
+
+-(NSString *)description {
+    return [NSString stringWithFormat:@"'%@', '%@', '%@'", _player.playerFirstName, _player.playerLastName, _player.teamName];
+}
+
 @end

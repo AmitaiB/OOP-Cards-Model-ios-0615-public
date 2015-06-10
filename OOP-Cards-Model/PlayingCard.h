@@ -15,5 +15,7 @@
 
 -(instancetype)init;
 
+-(NSString *)description;
+
 
 @end
