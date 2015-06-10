@@ -10,7 +10,11 @@
 
 @implementation BaseballPlayer
 
-
++(NSNumber*)convertLbsToKGsWithLbs:(NSNumber*)weightInLBS {
+    //    1.0 lbs = 0.4536 kg
+    CGFloat LBS = [weightInLBS floatValue];
+    return [NSNumber numberWithFloat: (LBS / 0.4536)];
+}
 
 -(instancetype)initWithFirstName:(NSString*)firstName
 //                        PlayerTeam:(NSString*)teamName
@@ -34,9 +38,4 @@
     return [self initWithFirstName:@"" lastName:@"" weight:@0 number:@0 height:@0];
 }
 
--(NSNumber*)convertLbsToKGsWithLbs:(NSNumber*)weightInLBS {
-//    1.0 lbs = 0.4536 kg
-    CGFloat LBS = [weightInLBS floatValue];
-    return [NSNumber numberWithFloat: (LBS / 0.4536)];
-}
 @end

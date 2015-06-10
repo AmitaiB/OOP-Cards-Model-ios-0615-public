@@ -17,6 +17,8 @@
 @property (nonatomic) NSNumber* weight;
 @property (nonatomic) NSNumber* height;
 
++(NSNumber*)convertLbsToKGsWithLbs:(NSNumber*)weightInLBS;
+
 -(instancetype)init;
 -(instancetype)initWithFirstName:(NSString*)firstName
 //                        PlayerTeam:(NSString*)teamName
@@ -25,6 +27,5 @@
                            number:(NSNumber*)playerNumber
                            height:(NSNumber*)playerHeight;
 
--(NSNumber*)convertLbsToKGsWithLbs:(NSNumber*)weightInLBS;
 
 @end
