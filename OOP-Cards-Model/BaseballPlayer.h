@@ -21,8 +21,10 @@
 -(instancetype)initWithFirstName:(NSString*)firstName
 //                        PlayerTeam:(NSString*)teamName
                          lastName:(NSString*)lastName
+                          weight:(NSNumber*)playerWeight
                            number:(NSNumber*)playerNumber
-                           weight:(NSNumber*)playerWeight
                            height:(NSNumber*)playerHeight;
+
+-(NSNumber*)convertLbsToKGsWithLbs:(NSNumber*)weightInLBS;
 
 @end

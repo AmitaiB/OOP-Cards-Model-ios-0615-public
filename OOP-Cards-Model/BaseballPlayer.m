@@ -12,15 +12,15 @@
 
 
 
--(instancetype)initWithPlayerTeam:(NSString*)teamName
-                        firstName:(NSString*)firstName
-                         lastName:(NSString*)lastName
-                           number:(NSNumber*)playerNumber
-                           weight:(NSNumber*)playerWeight
-                           height:(NSNumber*)playerHeight {
+-(instancetype)initWithFirstName:(NSString*)firstName
+//                        PlayerTeam:(NSString*)teamName
+                        lastName:(NSString*)lastName
+                          weight:(NSNumber*)playerWeight
+                          number:(NSNumber*)playerNumber
+                          height:(NSNumber*)playerHeight {
     self = [super init];
     if (self) {
-        _teamName = teamName;
+        _teamName = @"";
         _firstName = firstName;
         _lastName = lastName;
         _number = playerNumber;
@@ -31,6 +31,12 @@
 }
 
 -(instancetype)init {
-    return [self initWithFirstName:@"" PlayerTeam:@"" lastName:@"" number:@0 weight:@0 height:@0];
+    return [self initWithFirstName:@"" lastName:@"" weight:@0 number:@0 height:@0];
+}
+
+-(NSNumber*)convertLbsToKGsWithLbs:(NSNumber*)weightInLBS {
+//    1.0 lbs = 0.4536 kg
+    CGFloat LBS = [weightInLBS floatValue];
+    return [NSNumber numberWithFloat: (LBS / 0.4536)];
 }
 @end
