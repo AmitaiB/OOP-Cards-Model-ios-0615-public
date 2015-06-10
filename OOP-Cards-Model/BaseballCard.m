@@ -16,12 +16,13 @@
     _player = player;
     player.teamName = team;
         _teamName = team;
+        self.faceUp = NO;
     };
     return self;
 }
 
 -(instancetype)init {
-    return [super init];
+    return [self initWithBaseballPlayer:@"" teamName:@"" brand:@"" cardNumber:@0];
 }
 
 -(NSString *)description {
