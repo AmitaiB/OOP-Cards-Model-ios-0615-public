@@ -13,8 +13,21 @@
 -(instancetype)initWithSuit:(NSString*)suit rank:(NSNumber*)rank {
     self = [super init];
     if (self) {
-    _rank = rank;
-    _suit = suit;
+        if (1 <= [rank intValue] && [rank intValue] < 14 ) {
+            _rank = rank;
+        } else {
+            _rank = @0;
+        }
+        NSCharacterSet *suitSymbols = [NSCharacterSet characterSetWithCharactersInString:@"♥♠♣♦"];
+        
+        if (![suit isEqualToString: @""]) {
+            if ([suitSymbols characterIsMember:[suit characterAtIndex:0]]) {
+                _suit = suit;
+            } else {
+                _suit = @"";
+            }
+        }
+    
     }
     return self;
 }
