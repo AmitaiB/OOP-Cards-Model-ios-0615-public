@@ -10,6 +10,7 @@
 		386EB8FD1B288D0300D73A8F /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EB8FC1B288D0300D73A8F /* Card.m */; };
 		386EB9001B288D1500D73A8F /* PlayingCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EB8FF1B288D1500D73A8F /* PlayingCard.m */; };
 		386EB9031B288D2200D73A8F /* BaseballCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EB9021B288D2200D73A8F /* BaseballCard.m */; };
+		386EB9061B288F7800D73A8F /* BaseballPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 386EB9051B288F7800D73A8F /* BaseballPlayer.m */; };
 		404F75B720B2496BAE31D058 /* libPods-OOP-Cards-ModelTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19591EEAF47649EEA6965847 /* libPods-OOP-Cards-ModelTests.a */; };
 		44CFDE96189C389300238AA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CFDE95189C389300238AA4 /* Foundation.framework */; };
 		44CFDE98189C389300238AA4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CFDE97189C389300238AA4 /* CoreGraphics.framework */; };
@@ -47,6 +48,8 @@
 		386EB8FF1B288D1500D73A8F /* PlayingCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayingCard.m; sourceTree = "<group>"; };
 		386EB9011B288D2200D73A8F /* BaseballCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseballCard.h; sourceTree = "<group>"; };
 		386EB9021B288D2200D73A8F /* BaseballCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseballCard.m; sourceTree = "<group>"; };
+		386EB9041B288F7800D73A8F /* BaseballPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseballPlayer.h; sourceTree = "<group>"; };
+		386EB9051B288F7800D73A8F /* BaseballPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseballPlayer.m; sourceTree = "<group>"; };
 		44CFDE92189C389300238AA4 /* OOP-Cards-Model.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OOP-Cards-Model.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CFDE95189C389300238AA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44CFDE97189C389300238AA4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -146,6 +149,8 @@
 				386EB8FF1B288D1500D73A8F /* PlayingCard.m */,
 				386EB9011B288D2200D73A8F /* BaseballCard.h */,
 				386EB9021B288D2200D73A8F /* BaseballCard.m */,
+				386EB9041B288F7800D73A8F /* BaseballPlayer.h */,
+				386EB9051B288F7800D73A8F /* BaseballPlayer.m */,
 				44CFDEA7189C389300238AA4 /* Images.xcassets */,
 				44CFDE9C189C389300238AA4 /* Supporting Files */,
 			);
@@ -316,6 +321,7 @@
 			files = (
 				386EB9031B288D2200D73A8F /* BaseballCard.m in Sources */,
 				44CFDEA6189C389300238AA4 /* AppDelegate.m in Sources */,
+				386EB9061B288F7800D73A8F /* BaseballPlayer.m in Sources */,
 				44CFDEA2189C389300238AA4 /* main.m in Sources */,
 				386EB9001B288D1500D73A8F /* PlayingCard.m in Sources */,
 				386EB8FD1B288D0300D73A8F /* Card.m in Sources */,

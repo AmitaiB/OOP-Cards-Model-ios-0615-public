@@ -1,16 +1,13 @@
 //
-//  BaseballCard.h
+//  BaseballPlayer.m
 //  OOP-Cards-Model
 //
 //  Created by Amitai Blickstein on 6/10/15.
 //  Copyright (c) 2015 Al Tyus. All rights reserved.
 //
 
-#import "Card.h"
+#import "BaseballPlayer.h"
 
-@interface BaseballCard : Card
-
-
-
+@implementation BaseballPlayer
 
 @end
