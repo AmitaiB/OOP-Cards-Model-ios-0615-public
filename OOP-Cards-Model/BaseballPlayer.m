@@ -20,12 +20,12 @@
                            height:(NSNumber*)playerHeight {
     self = [super init];
     if (self) {
-                    _teamName = teamName;
-            _playerFirstName = firstName;
-            _playerLastName = lastName;
-            _playerNumber = playerNumber;
-            _playerWeight = playerWeight;
-            _playerHeight = playerHeight;
+        _teamName = teamName;
+        _firstName = firstName;
+        _lastName = lastName;
+        _number = playerNumber;
+        _weight = playerWeight;
+        _height = playerHeight;
     }
     return self;
 }

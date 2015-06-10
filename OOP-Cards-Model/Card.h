@@ -17,4 +17,6 @@
 -(instancetype)init;
 -(instancetype)initWithCardNumber:(NSNumber*)cardNumber brand:(NSString*)brand;
 
+-(BOOL)isFaceUp;
+
 @end

@@ -22,11 +22,11 @@
 }
 
 -(instancetype)init {
-    return [self initWithBaseballPlayer:@"" teamName:@"" brand:@"" cardNumber:@0];
+    return [self initWithBaseballPlayer:[[BaseballPlayer alloc] init] teamName:@"" brand:@"" cardNumber:@0];
 }
 
 -(NSString *)description {
-    return [NSString stringWithFormat:@"Player name:%@%@ Team name:%@ Brand:%@ Card Number:%@", self.player.playerFirstName, self.player.playerLastName, self.player.teamName, self.brand, self.cardNumber];
+    return [NSString stringWithFormat:@"Player name:%@%@ Team name:%@ Brand:%@ Card Number:%@", self.player.firstName, self.player.lastName, self.player.teamName, self.brand, self.cardNumber];
 }
 
 @end

@@ -11,15 +11,15 @@
 @interface BaseballPlayer : NSObject
 
 @property (nonatomic, strong) NSString *teamName;
-@property (nonatomic, strong) NSString *playerFirstName;
-@property (nonatomic, strong) NSString *playerLastName;
-@property (nonatomic) NSNumber* playerNumber;
-@property (nonatomic) NSNumber* playerWeight;
-@property (nonatomic) NSNumber* playerHeight;
+@property (nonatomic, strong) NSString *firstName;
+@property (nonatomic, strong) NSString *lastName;
+@property (nonatomic) NSNumber* number;
+@property (nonatomic) NSNumber* weight;
+@property (nonatomic) NSNumber* height;
 
 -(instancetype)init;
 -(instancetype)initWithFirstName:(NSString*)firstName
-                        PlayerTeam:(NSString*)teamName
+//                        PlayerTeam:(NSString*)teamName
                          lastName:(NSString*)lastName
                            number:(NSNumber*)playerNumber
                            weight:(NSNumber*)playerWeight

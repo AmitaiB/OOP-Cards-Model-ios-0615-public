@@ -24,5 +24,8 @@
     return [self initWithCardNumber:@0 brand:@""];
 }
 
+-(BOOL)isFaceUp {
+    return self.faceUp;
+}
 
 @end
