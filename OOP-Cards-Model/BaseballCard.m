@@ -10,6 +10,12 @@
 
 @implementation BaseballCard
 
+-(instancetype)initWithPlayer:(BaseballPlayer*)player {
+    self = [self init];
+    _player = player;
+    return self;
+}
+
 -(instancetype)init {
     return [self init];
 }

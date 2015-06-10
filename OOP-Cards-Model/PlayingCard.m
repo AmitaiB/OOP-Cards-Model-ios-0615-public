@@ -10,8 +10,15 @@
 
 @implementation PlayingCard
 
+-(instancetype)initWithSuit:(NSString*)suit rank:(NSInteger)rank {
+    self = [self init];
+    _rank = rank;
+    _suit = suit;
+    return self;
+}
+
 -(instancetype)init {
-    return [self init];
+    return [self initWithSuit:@"" rank:0];
 }
 
 -(NSString*)description {

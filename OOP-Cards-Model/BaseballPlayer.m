@@ -10,4 +10,19 @@
 
 @implementation BaseballPlayer
 
+
+-(instancetype)init {
+    return [self init];
+}
+
+-(instancetype)initWithPlayerTeam:(NSString*)teamName
+                        firstName:(NSString*)firstName
+                         lastName:(NSString*)lastName
+                           number:(NSInteger)playerNumber
+                           weight:(NSInteger)playerWeight
+                           height:(NSInteger)playerHeight {
+    self = [self init];
+    
+}
+
 @end
