@@ -18,17 +18,29 @@
         } else {
             _rank = @0;
         }
-        NSCharacterSet *suitSymbols = [NSCharacterSet characterSetWithCharactersInString:@"♥♠♣♦"];
         
-        if (![suit isEqualToString: @""]) {
-            if ([suitSymbols characterIsMember:[suit characterAtIndex:0]]) {
+        BOOL isSingleChar;
+        BOOL thatCharIsProperSuit;
+        
+        if ([suit length] == 1) {
+            isSingleChar = YES;
+        } else {
+            isSingleChar = NO;
+            }
+        
+        NSCharacterSet *suitSymbols = [NSCharacterSet characterSetWithCharactersInString:@"♥♠♣♦"];
+        if ([suitSymbols characterIsMember:[suit characterAtIndex:0]]) {
+            thatCharIsProperSuit = YES;
+        } else {
+            thatCharIsProperSuit = NO;
+            }
+    
+        if (isSingleChar && thatCharIsProperSuit) {
                 _suit = suit;
             } else {
                 _suit = @"";
             }
         }
-    
-    }
     return self;
 }
 
