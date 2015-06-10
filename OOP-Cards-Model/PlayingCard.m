@@ -11,9 +11,11 @@
 @implementation PlayingCard
 
 -(instancetype)initWithSuit:(NSString*)suit rank:(NSNumber*)rank {
-    self = [self init];
+    self = [super init];
+    if (self) {
     _rank = rank;
     _suit = suit;
+    }
     return self;
 }
 

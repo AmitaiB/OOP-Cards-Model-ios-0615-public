@@ -13,7 +13,8 @@
 +(NSNumber*)convertLbsToKGsWithLbs:(NSNumber*)weightInLBS {
     //    1.0 lbs = 0.4536 kg
     CGFloat LBS = [weightInLBS floatValue];
-    return [NSNumber numberWithFloat: (LBS / 0.4536)];
+    NSLog(@"%f", LBS);
+    return [NSNumber numberWithFloat: roundf(LBS * 0.4536)];
 }
 
 -(instancetype)initWithFirstName:(NSString*)firstName
