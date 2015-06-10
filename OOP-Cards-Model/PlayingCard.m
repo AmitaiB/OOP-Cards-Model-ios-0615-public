@@ -10,4 +10,8 @@
 
 @implementation PlayingCard
 
+-(instancetype)init {
+    return [self init];
+}
+
 @end
