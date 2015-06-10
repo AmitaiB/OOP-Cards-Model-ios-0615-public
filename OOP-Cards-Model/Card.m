@@ -17,4 +17,11 @@
     return self;
 }
 
+-(instancetype)initWithCardNumber:(NSInteger)cardNumber brand:(NSString*)brand {
+    self = [self init];
+    _cardNumber = cardNumber;
+    _brand = brand;
+    return self;
+}
+
 @end

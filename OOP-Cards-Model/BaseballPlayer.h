@@ -18,8 +18,8 @@
 @property (nonatomic) NSInteger playerHeight;
 
 -(instancetype)init;
--(instancetype)initWithPlayerTeam:(NSString*)teamName
-                        firstName:(NSString*)firstName
+-(instancetype)initWithFirstName:(NSString*)firstName
+                        PlayerTeam:(NSString*)teamName
                          lastName:(NSString*)lastName
                            number:(NSInteger)playerNumber
                            weight:(NSInteger)playerWeight

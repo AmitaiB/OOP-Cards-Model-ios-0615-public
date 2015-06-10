@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSString *brand;
 
 -(instancetype)init;
+-(instancetype)initWithCardNumber:(NSInteger)cardNumber brand:(NSString*)brand;
 
 @end

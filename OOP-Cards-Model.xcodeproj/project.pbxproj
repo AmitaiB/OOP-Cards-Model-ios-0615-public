@@ -171,9 +171,9 @@
 		44CFDEB4189C389300238AA4 /* OOP-Cards-ModelTests */ = {
 			isa = PBXGroup;
 			children = (
+				722736741948E278002A8E6A /* CardSpec.m */,
 				722736721948E278002A8E6A /* BaseballCardSpec.m */,
 				722736731948E278002A8E6A /* BaseballPlayerSpec.m */,
-				722736741948E278002A8E6A /* CardSpec.m */,
 				722736751948E278002A8E6A /* PlayingCardSpec.m */,
 				44CFDEB5189C389300238AA4 /* Supporting Files */,
 			);

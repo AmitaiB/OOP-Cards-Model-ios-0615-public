@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) BaseballPlayer *player;
 
--(instancetype)initWithPlayer:(BaseballPlayer*)player;
+-(instancetype)initWithBaseballPlayer:(BaseballPlayer*)player teamName:(NSString*)team brand:(NSString*)brand cardNumber:(NSInteger)cardNum;
 -(instancetype)init;
 
 -(NSString *)description;
