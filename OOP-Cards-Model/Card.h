@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSNumber* cardNumber;
 @property (nonatomic, strong) NSString *brand;
+@property (nonatomic) BOOL faceUp;
 
 -(instancetype)init;
 -(instancetype)initWithCardNumber:(NSNumber*)cardNumber brand:(NSString*)brand;

@@ -25,7 +25,7 @@
 }
 
 -(NSString *)description {
-    return [NSString stringWithFormat:@"'%@', '%@', '%@'", _player.playerFirstName, _player.playerLastName, _player.teamName];
+    return [NSString stringWithFormat:@"Player name:%@%@ Team name:%@ Brand:%@ Card Number:%@", self.player.playerFirstName, self.player.playerLastName, self.player.teamName, self.brand, self.cardNumber];
 }
 
 @end

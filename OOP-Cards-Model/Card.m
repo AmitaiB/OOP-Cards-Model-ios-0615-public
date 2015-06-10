@@ -10,18 +10,19 @@
 
 @implementation Card
 
--(instancetype)init {
+-(instancetype)initWithCardNumber:(NSNumber*)cardNumber brand:(NSString*)brand {
     self = [super init];
     if (self) {
+        _cardNumber = cardNumber;
+        _brand = brand;
+        _faceUp = NO;
     }
     return self;
 }
 
--(instancetype)initWithCardNumber:(NSNumber*)cardNumber brand:(NSString*)brand {
-    self = [self init];
-    _cardNumber = cardNumber;
-    _brand = brand;
-    return self;
+-(instancetype)init {
+    return [self initWithCardNumber:@0 brand:@""];
 }
+
 
 @end
