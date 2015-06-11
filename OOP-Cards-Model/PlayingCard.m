@@ -27,20 +27,21 @@
         } else {
             isSingleChar = NO;
             }
-        
-        NSCharacterSet *suitSymbols = [NSCharacterSet characterSetWithCharactersInString:@"♥♠♣♦"];
-        if ([suitSymbols characterIsMember:[suit characterAtIndex:0]]) {
-            thatCharIsProperSuit = YES;
-        } else {
-            thatCharIsProperSuit = NO;
+        if (isSingleChar) {
+            NSCharacterSet *suitSymbols = [NSCharacterSet characterSetWithCharactersInString:@"♥♠♣♦"];
+            if ([suitSymbols characterIsMember:[suit characterAtIndex:0]]) {
+                thatCharIsProperSuit = YES;
+            } else {
+                thatCharIsProperSuit = NO;
             }
     
-        if (isSingleChar && thatCharIsProperSuit) {
+            if (isSingleChar && thatCharIsProperSuit) {
                 _suit = suit;
             } else {
                 _suit = @"";
             }
         }
+    }
     return self;
 }
 
