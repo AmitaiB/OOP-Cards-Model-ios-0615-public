@@ -32,8 +32,17 @@
 }
 
 -(void)setRank:(NSNumber *)rank {
-    //override setter to check for validity
-    
+    //overrides setter to check for validity
+    _rank = rank;
+    if (!self.isProperRank)
+        _rank = @0;
+}
+
+-(void)setSuit:(NSString *)suit {
+    //overrides setter to check for validity
+    _suit = suit;
+    if (!self.isProperSuit)
+        _suit = @"";
 }
 
 -(NSString*)description {
