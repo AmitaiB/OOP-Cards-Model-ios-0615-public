@@ -17,6 +17,8 @@
 -(instancetype)init;
 
 -(NSString *)description;
+-(BOOL)isSingleChar;
+-(BOOL)isProperRank;
 
 
 @end

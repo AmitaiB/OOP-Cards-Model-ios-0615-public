@@ -12,11 +12,11 @@
 
 -(instancetype)initWithSuit:(NSString*)suit rank:(NSNumber*)rank {
     self = [super init];
-    if (self) {
-        if (1 <= [rank intValue] && [rank intValue] < 14 ) {
+    if ([self ]) {
+        if ([self.isProperRank]  {
             _rank = rank;
         } else {
-            _rank = @0;
+            _rank = [NSNumber numberWithFloat:0];
         }
         
         BOOL isSingleChar;
@@ -26,9 +26,11 @@
             isSingleChar = YES;
         } else {
             isSingleChar = NO;
+            NSLog(@"I'm line 30! isSingleChar is now %d", isSingleChar);
             }
         if (isSingleChar) {
             NSCharacterSet *suitSymbols = [NSCharacterSet characterSetWithCharactersInString:@"♥♠♣♦"];
+            
             if ([suitSymbols characterIsMember:[suit characterAtIndex:0]]) {
                 thatCharIsProperSuit = YES;
             } else {
@@ -51,8 +53,25 @@
     return [self initWithSuit:@"" rank:@0];
 }
 
+-(void)setRank:(NSNumber *)rank
+
 -(NSString*)description {
     return [NSString stringWithFormat:@"%li of %@", (long)self.rank, self.suit];
 }
 
+-(BOOL)isSingleChar {
+    if (string.length != 1)
+        return NO;
+    else return YES;
+}
+            
+-(BOOL)isProperRank {
+    return NSLocationInRange([self.rank intValue], NSMakeRange(1, 13));
+}
+             
+-(BOOL)charIsProperSuit {
+                 
+}
+             
+             
 @end
