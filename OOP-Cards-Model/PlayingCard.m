@@ -35,11 +35,13 @@
                 thatCharIsProperSuit = NO;
             }
     
-            if (isSingleChar && thatCharIsProperSuit) {
-                _suit = suit;
-            } else {
+            if (!isSingleChar || !thatCharIsProperSuit) {
                 _suit = @"";
+            } else {
+                _suit = suit;
             }
+        } else {
+            _suit = @"";
         }
     }
     return self;
