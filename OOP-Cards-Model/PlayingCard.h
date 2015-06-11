@@ -19,6 +19,7 @@
 -(NSString *)description;
 -(BOOL)isSingleChar;
 -(BOOL)isProperRank;
+-(BOOL)isProperSuit;
 
 
 @end

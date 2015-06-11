@@ -13,23 +13,16 @@
 -(instancetype)initWithSuit:(NSString*)suit rank:(NSNumber*)rank {
     self = [super init];
     if (self) {
-        if ([self.isProperRank])  {
+        if (self.isProperRank)
             _rank = rank;
-        } else {
+        else
             _rank = @0;
-        }
-        
-        BOOL thatCharIsProperSuit;
         
         
-            if (!isSingleChar || !thatCharIsProperSuit) {
-                _suit = @"";
-            } else {
-                _suit = suit;
-            }
-        } else {
+        if (self.isProperSuit)
+            _suit = suit;
+        else
             _suit = @"";
-        }
     }
     return self;
 }
@@ -40,23 +33,17 @@
 
 -(void)setRank:(NSNumber *)rank {
     //override setter to check for validity
+    
 }
 
 -(NSString*)description {
     return [NSString stringWithFormat:@"%li of %@", (long)self.rank, self.suit];
 }
 
--(BOOL)isSingleChar {
-    if (string.length != 1)
-        return NO;
-    else return YES;
-}
-            
 -(BOOL)isProperRank {
     return NSLocationInRange([self.rank intValue], NSMakeRange(1, 13));
 }
-             
--(BOOL)charIsProperSuit {
+-(BOOL)isProperSuit {
     if (!self.isSingleChar)
         return NO;
     
@@ -68,5 +55,10 @@
     else
         return NO;
 }
-    
+-(BOOL)isSingleChar {
+    if (string.length != 1)
+        return NO;
+    else return YES;
+}
+
 @end
