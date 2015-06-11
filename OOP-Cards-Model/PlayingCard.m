@@ -13,15 +13,12 @@
 -(instancetype)initWithSuit:(NSString*)suit rank:(NSNumber*)rank {
     self = [super init];
     if (self) {
-        if (self.isProperRank)
             _rank = rank;
-        else
+        if (!self.isProperRank)
             _rank = @0;
         
-        
-        if (self.isProperSuit)
-            _suit = suit;
-        else
+        _suit = suit;
+        if (!self.isProperSuit)
             _suit = @"";
     }
     return self;
