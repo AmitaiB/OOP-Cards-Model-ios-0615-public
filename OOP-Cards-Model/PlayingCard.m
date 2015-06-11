@@ -12,7 +12,7 @@
 
 -(instancetype)initWithSuit:(NSString*)suit rank:(NSNumber*)rank {
     self = [super init];
-    if ([self ]) {
+    if (self) {
         if ([self.isProperRank])  {
             _rank = rank;
         } else {
@@ -21,15 +21,7 @@
         
         BOOL thatCharIsProperSuit;
         
-        if (self.isSingleChar) {
-            NSCharacterSet *suitSymbols = [NSCharacterSet characterSetWithCharactersInString:@"♥♠♣♦"];
-            
-            if ([suitSymbols characterIsMember:[suit characterAtIndex:0]]) {
-                thatCharIsProperSuit = YES;
-            } else {
-                thatCharIsProperSuit = NO;
-            }
-    
+        
             if (!isSingleChar || !thatCharIsProperSuit) {
                 _suit = @"";
             } else {
@@ -46,7 +38,9 @@
     return [self initWithSuit:@"" rank:@0];
 }
 
--(void)setRank:(NSNumber *)rank
+-(void)setRank:(NSNumber *)rank {
+    //override setter to check for validity
+}
 
 -(NSString*)description {
     return [NSString stringWithFormat:@"%li of %@", (long)self.rank, self.suit];
@@ -63,8 +57,16 @@
 }
              
 -(BOOL)charIsProperSuit {
-                 
+    if (!self.isSingleChar)
+        return NO;
+    
+    NSCharacterSet *suitSymbols = [NSCharacterSet characterSetWithCharactersInString:@"♥♠♣♦"];
+    unichar possibleSuit = [self.suit characterAtIndex:0];
+    
+    if ([suitSymbols characterIsMember:possibleSuit])
+        return YES;
+    else
+        return NO;
 }
-             
-             
+    
 @end
