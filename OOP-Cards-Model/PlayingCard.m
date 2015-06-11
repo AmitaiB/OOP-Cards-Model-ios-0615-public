@@ -13,22 +13,15 @@
 -(instancetype)initWithSuit:(NSString*)suit rank:(NSNumber*)rank {
     self = [super init];
     if ([self ]) {
-        if ([self.isProperRank]  {
+        if ([self.isProperRank])  {
             _rank = rank;
         } else {
-            _rank = [NSNumber numberWithFloat:0];
+            _rank = @0;
         }
         
-        BOOL isSingleChar;
         BOOL thatCharIsProperSuit;
         
-        if ([suit length] == 1) {
-            isSingleChar = YES;
-        } else {
-            isSingleChar = NO;
-            NSLog(@"I'm line 30! isSingleChar is now %d", isSingleChar);
-            }
-        if (isSingleChar) {
+        if (self.isSingleChar) {
             NSCharacterSet *suitSymbols = [NSCharacterSet characterSetWithCharactersInString:@"♥♠♣♦"];
             
             if ([suitSymbols characterIsMember:[suit characterAtIndex:0]]) {
