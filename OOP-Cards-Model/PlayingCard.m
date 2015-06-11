@@ -65,7 +65,7 @@
         return NO;
 }
 -(BOOL)isSingleChar {
-    if (string.length != 1)
+    if (self.suit.length != 1)
         return NO;
     else return YES;
 }
